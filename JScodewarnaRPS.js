@@ -7,6 +7,9 @@ function processColor() {
     if (hexRegex.test(colorInput)) {
         // Mengganti warna pada color box
         document.getElementById('colorBox').style.backgroundColor = colorInput;
+        var colorText = document.createElement('div');
+        colorText.textContent = 'Warna Hex: ' + colorInput;
+        colorBox.appendChild(colorText);
     } else {
         alert('raperiadisepti: kode hex color tidak valid!');
     }
